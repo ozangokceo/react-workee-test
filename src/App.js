@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Card from "./Card";
+import Header from "./Header";
+import "./App.css";
+
 
 function App() {
+  let cardCount = 10;
+  const listKeys = [];
+  let sessionArray = []
+
+  for (let i = 0; i < cardCount; i++) {
+    listKeys.push(i);
+  }
+
+  for (let i = 0; i < cardCount; i++) {
+    sessionArray.push(Math.floor( Math.random() * 20))
+  }
+
+  console.log(sessionArray)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="main">
+      <Header/>
+      {listKeys.map(i => {
+        return <Card key={i} session={sessionArray} />
+      })}
     </div>
   );
 }

@@ -1,0 +1,46 @@
+.card {
+  margin: 2em auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 0 0 300px;
+  justify-content: left;
+  width: 50vw;
+  height: 56px;
+  background-color: #ededed;
+  border: 2px solid #ededed;
+  border-radius: 10px;
+}
+
+@media (max-width: 1366px) {
+  .card {
+    width: 683px;
+  }
+}
+
+.card:hover {
+  background-color: #f4f5f4;
+
+}
+
+.name {
+  text-transform: capitalize;
+  font-size: 1.1em;
+}
+
+.avatar {
+  height: 75%;
+  margin: 0 1em;
+}
+
+.email {
+  margin: 0 auto;
+}
+
+.session {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
