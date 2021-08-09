@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  flex: 0 0 300px;
   justify-content: left;
   width: 50vw;
   height: 56px;
@@ -23,24 +22,30 @@
 
 }
 
+.avatar {
+  height: 75%;
+  margin: 0 0.5em;
+  flex: 1 0 auto;
+}
+
 .name {
   text-transform: capitalize;
   font-size: 1.1em;
-}
-
-.avatar {
-  height: 75%;
-  margin: 0 1em;
+  flex: 1 0 200px;
 }
 
 .email {
   margin: 0 auto;
+  flex: 1 0 200px;
 }
 
 .session {
   margin-left: auto;
   margin-right: auto;
-
+  flex: 1 0 100px;
 }
+
+
+
 
 

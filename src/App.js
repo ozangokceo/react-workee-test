@@ -1,26 +1,29 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from 'react';
 import Card from "./Card";
 import Header from "./Header";
 import "./App.css";
 
 
 function App() {
-  let cardCount = 10;
+  const [count, setCount] = useState(10);
+
+  function countChange() {
+    setCount(count + 1);
+  }
+
   const listKeys = [];
   let sessionArray = []
 
-  for (let i = 0; i < cardCount; i++) {
+  for (let i = 0; i < count; i++) {
     listKeys.push(i);
   }
 
-  for (let i = 0; i < cardCount; i++) {
+  for (let i = 0; i < count; i++) {
     sessionArray.push(Math.floor( Math.random() * 20))
   }
-
-  console.log(sessionArray)
   return (
     <div id="main">
-      <Header/>
+      <Header />
       {listKeys.map(i => {
         return <Card key={i} session={sessionArray} />
       })}
